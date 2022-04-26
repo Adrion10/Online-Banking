@@ -1,0 +1,182 @@
+:root {
+  --color-citi-bue: #004c88;
+  --color-citi-red: #f24423;
+  --color-deposit: #00d600;
+  --color-withdraw: #ff2424;
+  --color-transfer: #ad7100;
+  --color-request: #8a1d1d;
+  --color-close: #fff000;
+  --color-soft-white: #f3f3f3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+li {
+  list-style: none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--color-soft-white);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+.welcome-box {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+}
+.nav img {
+  width: 100px;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+.nav ul input {
+  margin-right: 10px;
+  width: 100px;
+  outline: none;
+  text-align: center;
+  border-radius: 3px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 3px 0;
+}
+.nav ul input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.login-btn {
+  cursor: pointer;
+  background-color: var(--color-citi-bue);
+  color: white;
+  border: 0;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+.login-btn:active {
+  transform: scale(0.95);
+}
+.container {
+  width: 95%;
+  margin: auto;
+  background-color: rgb(206, 206, 206);
+  padding: 20px;
+  margin-top: 5px;
+  margin-top: 20px;
+}
+.current-box {
+  display: flex;
+  justify-content: space-between;
+}
+.bank-info {
+  display: flex;
+}
+.money-movements {
+  background-color: #fff;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   height: 60vh; 
+   overflow: hidden;
+}
+.scroll_event {
+  overflow: scroll;
+  cursor: pointer;
+}
+/* DRY */
+.money-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.movement-pm {
+  padding: 3px 20px;
+  border-radius: 20px;
+  color: #fff;
+}
+.movement-withdraw {
+  background-color: var(--color-withdraw);
+}
+.movement-deposit {
+  background-color: var(--color-deposit);
+}
+.money-amount-withdraw {
+  color: var(--color-withdraw);
+}
+.money-amount-deposit {
+  color: var(--color-deposit);
+}
+.bank-operation {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boxes {
+  background-color: var(--color-transfer);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.boxes p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.boxes input {
+  width: 40%;
+  outline: none;
+  padding: 3px 20px;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 10px;
+
+}
+.request-box {
+  background-color: rgb(199, 122, 122);
+}
+.btn {
+  /* margin-top: 20px; */
+  background-color: var(--color-citi-bue);
+  color: #fff;
+  border: 0;
+  padding: 5px 20px;
+  border-radius: 3px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(221, 213, 213, 0.4);
+}
+.message-box{
+  position: absolute;
+  left: 50%;
+  top: 30%;transform: translate(-50% , -50%);
+  background-color: rgb(219, 205, 205);
+  width: 300px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.message-box .btn{
+  display: inline-block;
+  cursor: pointer;
+}

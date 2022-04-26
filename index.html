@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Banking</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data: ," />
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <p class="welcome-box">Welcome To The Citibank</p>
+      <img src="/citi.png" alt="Logo" />
+      <ul>
+        <li>
+          <input id="userName" type="text" placeholder="User Name" />
+        </li>
+        <li>
+          <input id="password" type="password" placeholder="Password" />
+        </li>
+        <button class="login-btn" id="login-btn">&rarr;</button>
+      </ul>
+    </nav>
+    <div class="container hidden">
+      <div class="current-box">
+        <div class="current-info">
+          <p>Current Balance</p>
+          <p class="date">24/11/2021</p>
+        </div>
+        <div class="balance-money">3000€</div>
+      </div>
+      <div class="bank-info">
+        <div class="money-movements">
+          <!-- Amateur -->
+          <div class="money-box">
+            <p class="movement-pm movement-withdraw">Lidl Shopping</p>
+            <div class="money-amount-withdraw">-300</div>
+          </div>
+          <div class="money-box">
+            <p class="movement-pm movement-deposit">Salary Receive</p>
+            <div class="money-amount-deposit">3000</div>
+          </div>
+        </div>
+        <div class="bank-operation">
+          <div class="boxes transfer-box">
+            <p>Transfer Money</p>
+            <input id="transferTo" type="text" placeholder="Transfer To" />
+            <input id="transfer-amount" type="text" placeholder="Amount" />
+            <button id="transfer-btn" class="btn">Confirm</button>
+          </div>
+          <div class="boxes request-box">
+            <p>Request Money</p>
+            <input id="requestFrom" type="text" placeholder="request From" />
+            <input id="request-amount" type="text" placeholder="Amount" />
+            <button id="request-btn" class="btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay hidden">
+        <div class="message-box">
+          <p class="warning-message"></p>
+          <button id="confirmbtn" class="btn">Confirm</button>
+          <button id="rejectbtn" class="btn">Reject</button>
+        </div>
+      </div>
+    </div>
+    <!-- € &rarr;-->
+    <script src="script.js"></script>
+  </body>
+</html>
